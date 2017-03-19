@@ -19,6 +19,10 @@ client.on('error', function (err) {
 client.on('close', function () {
   console.log('close');
 });
+
+client.on('data', myCallBack {
+});
+
 var myCallBack = function (err, data){
 	if (err) throw err;
 	console.log("data: " + data);
