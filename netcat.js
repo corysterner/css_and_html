@@ -21,7 +21,8 @@ client.on('close', function () {
 });
 var myCallBack = function (err, data){
 	if (err) throw err;
-	console.log("data: " + data.toString('ascii'));
+	console.log("data: " + data);
+	console.log(err);
 }
 
 function sendMessage(){
