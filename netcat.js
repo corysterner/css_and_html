@@ -20,8 +20,7 @@ client.on('close', function () {
   console.log('close');
 });
 
-client.on('data', myCallBack {
-});
+client.on('data', myCallBack);
 
 var myCallBack = function (err, data){
 	if (err) throw err;
