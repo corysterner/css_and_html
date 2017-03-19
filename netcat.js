@@ -25,7 +25,7 @@ var myCallBack = function (data){
 }
 
 function sendMessage(){
-	client.send('*IDN?', false,);
+	client.send('*IDN?', false, myCallBack);
 	console.log("Message sent");
 }
 client.start()
