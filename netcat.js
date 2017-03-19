@@ -19,9 +19,13 @@ client.on('error', function (err) {
 client.on('close', function () {
   console.log('close');
 });
+var myCallBack = function (data){
+	console.log(data.toString('ascii'));
+	if (err) throw err;
+}
 
 function sendMessage(){
-	client.send('DISP:TEXT "Working"');
+	client.send('*IDN?', false,);
 	console.log("Message sent");
 }
 client.start()
