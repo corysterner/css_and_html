@@ -2,7 +2,7 @@ var Netcat = require('node-netcat');
 var PORT = 5025;
 var HOST = '131.243.171.207';
 
-new Netcat.client(PORT, HOST)
+var client = Netcat.client(PORT, HOST);
 
 // client init connection
 
