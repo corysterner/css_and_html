@@ -5,7 +5,11 @@ var HOST = '131.243.171.207';
 var client = Netcat.client(PORT, HOST);
 
 // client init connection
-
+var myCallBack = function (err, data){
+	if (err) throw err;
+	console.log("data: " + data);
+	console.log(err);
+}
 
 client.on('open', function () {
 	console.log('open');
@@ -22,11 +26,6 @@ client.on('close', function () {
 
 client.on('data', myCallBack);
 
-var myCallBack = function (err, data){
-	if (err) throw err;
-	console.log("data: " + data);
-	console.log(err);
-}
 
 function sendMessage(){
 	client.send('*IDN?', false, myCallBack);
