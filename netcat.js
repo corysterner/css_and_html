@@ -20,8 +20,8 @@ client.on('close', function () {
   console.log('close');
 });
 var myCallBack = function (data){
-	console.log(data.toString('ascii'));
 	if (err) throw err;
+	console.log(data.toString('ascii'));
 }
 
 function sendMessage(){
