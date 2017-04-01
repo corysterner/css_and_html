@@ -3,17 +3,17 @@ cd ~
 #install node-js
 echo "installing nodejs"
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-apt-get install nodejs
+sudo apt-get install nodejs
 echo "installing npm"
-apt-get install npm
+sudo apt-get install npm
 #install express to make code simpler -g means global
 echo "installing express"
-npm install -express-generator
+sudo npm install express-generator
 #configure express to use stylus for css
 echo "configuring stylus"
-express -c stylus express_example
+sudo express -c stylus express_example
 #install dependencies 
-cd express_example && npm install
+sudo cd express_example && npm install
 #run app should see output "listening on port 3000"
 #DEBUG=express_example:* npm start
 #set up git
@@ -23,5 +23,5 @@ cd express_example && npm install
 #git commit -m 'initial commit'
 #git clone https://github.com/corysterner/css_and_html
 #use nodemon to make it so it doesn't have to restart with change
-npm install -g nodemon
+sudo npm install -g nodemon
 #now start app with DEBUG=express_example:* nodemon
